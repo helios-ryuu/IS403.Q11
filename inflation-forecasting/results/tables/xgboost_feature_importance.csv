@@ -1,0 +1,190 @@
+feature,importance,cumulative_importance
+Headline CPI_lag_3,0.2774749,0.2774749
+Macroeconomic Expectations - Inflation (12 months)_lag_1,0.13083398,0.4083089
+Private Fixed Investment (mill S/ 2007)_lag_3,0.108005695,0.51631457
+Headline CPI_lag_2,0.095059246,0.6113738
+Private Credit - MN - Mortgage (mill S/)_lag_3,0.05773359,0.6691074
+Private Credit - MN - Mortgage (mill S/)_lag_1,0.03710614,0.70621353
+Private Credit - MN - Mortgage (mill S/)_lag_2,0.031599622,0.7378132
+GDP Growth - Commerce (annual %)_lag_3,0.025823735,0.7636369
+GDP by Expenditure - Domestic Demand (mill S/ 2007)_lag_2,0.023384169,0.78702104
+Macroeconomic Expectations - Inflation (12 months)_lag_3,0.021761408,0.80878246
+Macroeconomic Expectations - Inflation (12 months)_lag_2,0.013192907,0.82197535
+Capacity Utilization - Food & Beverages_lag_3,0.012433821,0.8344092
+GDP by Expenditure - Domestic Demand (mill S/ 2007)_lag_1,0.01199932,0.8464085
+General Index (base 31/12/91 = 100)_lag_1,0.011087481,0.85749596
+Selective Index (base 31/12/91 = 100)_lag_1,0.010629972,0.8681259
+Headline CPI_lag_1,0.008596878,0.8767228
+GDP - Agriculture_lag_1,0.008498898,0.8852217
+Private Fixed Investment (mill S/ 2007)_lag_2,0.0063510537,0.8915728
+Macroeconomic Expectations - GDP (12 months)_lag_2,0.0061871978,0.89776
+Public Consumption (mill S/ 2007)_lag_1,0.0061513702,0.90391135
+Macroeconomic Expectations - Exchange Rate (12 months)_lag_1,0.00524535,0.9091567
+Coffee Price (US$ per ton)_lag_1,0.0051016537,0.91425836
+Macroeconomic Expectations - GDP (12 months)_lag_1,0.0048746816,0.91913307
+GDP - Agriculture_lag_3,0.0045103324,0.9236434
+Macroeconomic Expectations - GDP (12 months)_lag_3,0.0043681148,0.92801154
+Private Credit - ME - Consumption (mill US$)_lag_3,0.0042741317,0.93228567
+GDP Growth - Commerce (annual %)_lag_2,0.003663541,0.9359492
+Terms of Trade - Imports_lag_1,0.0033660855,0.9393153
+Macroeconomic Expectations - Exchange Rate (12 months)_lag_2,0.003344636,0.94266
+"Dependent Worker (3-month MA, thousands)_lag_2",0.0024396183,0.9450996
+Macroeconomic Expectations - Exchange Rate (12 months)_lag_3,0.0022964077,0.947396
+Capacity Utilization - Food & Beverages_lag_2,0.0022890829,0.94968504
+Corn Price (US$ per ton)_lag_1,0.0021209852,0.951806
+General Index (base 31/12/91 = 100)_lag_3,0.0021133781,0.9539194
+Terms of Trade - Exports_lag_2,0.002031164,0.95595056
+Private Consumption (mill S/ 2007)_lag_2,0.0018422696,0.9577928
+"Employed 25-44 (3-month MA, thousands)_lag_1",0.0016961236,0.9594889
+Capacity Utilization - Food & Beverages_lag_1,0.0015754898,0.9610644
+Wheat Price (US$ per ton)_lag_3,0.001561199,0.9626256
+Public Fixed Investment (mill S/ 2007)_lag_2,0.0015069081,0.96413255
+"Employed 14-24 (3-month MA, thousands)_lag_2",0.0014784767,0.96561104
+Private Credit - ME - Consumption (mill US$)_lag_2,0.0011668954,0.9667779
+GDP - Construction_lag_2,0.0011348941,0.9679128
+Employment Ratio (3-month MA)_lag_2,0.0011042431,0.969017
+Public Fixed Investment (mill S/ 2007)_lag_1,0.0010667829,0.97008383
+"Employed 25-44 (3-month MA, thousands)_lag_3",0.0009836573,0.9710675
+Selective Index (base 31/12/91 = 100)_lag_3,0.0009189104,0.9719864
+Terms of Trade - Exports_lag_1,0.00091415754,0.97290057
+Private Consumption (mill S/ 2007)_lag_1,0.0008633516,0.97376394
+Private Credit - ME - Consumption (mill US$)_lag_1,0.0008541188,0.9746181
+Coffee Price (US$ per ton)_lag_2,0.0008227782,0.97544086
+"Employed 25-44 (3-month MA, thousands)_lag_2",0.0008185196,0.97625935
+GDP - Non-Primary Manufacturing_lag_2,0.0007780916,0.97703743
+Monetary Policy Rate_lag_3,0.0007758172,0.97781324
+"Employed 14-24 (3-month MA, thousands)_lag_1",0.0007730486,0.9785863
+Fishmeal Price (US$ per ton)_lag_1,0.0007431993,0.9793295
+Business Expectations - Sales (MoM)_lag_3,0.00068776513,0.9800173
+Terms of Trade - Imports_lag_2,0.00067510747,0.9806924
+General Index (base 31/12/91 = 100)_lag_2,0.00065633026,0.9813487
+Wheat Price (US$ per ton)_lag_2,0.0006417987,0.9819905
+Copper Price (¢US$ per lb)_lag_1,0.0004911616,0.98248166
+Private Fixed Investment (mill S/ 2007)_lag_1,0.00046246758,0.98294413
+GDP by Expenditure - Domestic Demand ex. Inventories (mill S/ 2007)_lag_1,0.00046008124,0.9834042
+GDP - Construction_lag_3,0.00045095177,0.9838552
+Business Expectations - Sales (MoM)_lag_2,0.00043996985,0.9842951
+Private Credit - MN - Consumption (mill S/)_lag_1,0.00042730974,0.98472244
+GDP - Fishing_lag_2,0.00041228335,0.9851347
+"Unemployment Rate (3-month MA, %)_lag_2",0.0004099348,0.9855447
+GDP Growth - Non-Primary Manufacturing_lag_1,0.0004066062,0.9859513
+Business Expectations - Current Situation_lag_1,0.0003925234,0.9863438
+Wheat Price (US$ per ton)_lag_1,0.00038637305,0.98673016
+"Underemployed (3-month MA, thousands)_lag_1",0.00036850764,0.9870987
+Business Expectations - Demand (3 months)_lag_1,0.0003644263,0.9874631
+"Employed 14-24 (3-month MA, thousands)_lag_3",0.0003513032,0.9878144
+Terms of Trade - Imports_lag_3,0.0003296402,0.98814404
+Selective Index (base 31/12/91 = 100)_lag_2,0.0003285894,0.98847264
+"Unemployment Rate (3-month MA, %)_lag_3",0.00032492136,0.98879755
+GDP - Construction_lag_1,0.0003247254,0.9891223
+Business Expectations - Orders (MoM)_lag_1,0.0003123655,0.98943466
+Real Exchange Rate Index (monthly %)_lag_2,0.0003076425,0.9897423
+"Labor Force (3-month MA, thousands)_lag_1",0.00029966247,0.990042
+Business Expectations - Economy (3 months)_lag_3,0.00029741423,0.9903394
+"Adequately Employed (3-month MA, thousands)_lag_3",0.0002927521,0.9906322
+Soybean Oil Price (US$ per ton)_lag_1,0.0002855217,0.9909177
+Crude Oil Price (US$ per barrel)_lag_1,0.00027982143,0.9911975
+Business Expectations - Demand (3 months)_lag_3,0.00027963167,0.99147713
+Real Exchange Rate Index (monthly %)_lag_1,0.00027509787,0.9917522
+GDP Growth - Non-Primary Manufacturing_lag_2,0.00026600077,0.9920182
+"Unpaid Worker (3-month MA, thousands)_lag_3",0.0002484581,0.99226665
+Copper Price (¢US$ per lb)_lag_3,0.00022873719,0.9924954
+"Independent Worker (3-month MA, thousands)_lag_3",0.0002282669,0.9927237
+Crude Oil Price (US$ per barrel)_lag_3,0.00021873476,0.99294245
+"Unemployment Rate (3-month MA, %)_lag_1",0.00021410728,0.99315655
+GDP - Non-Primary Manufacturing_lag_3,0.00020837004,0.99336493
+Private Credit - MN - Consumption (mill S/)_lag_2,0.00020581263,0.99357074
+Gold (US$ per oz troy)_lag_1,0.00018948226,0.9937602
+Reserve Requirement Rate_lag_2,0.00018856474,0.9939488
+Business Expectations - Current Situation_lag_2,0.00018821041,0.99413705
+"Adequately Employed (3-month MA, thousands)_lag_1",0.00017429561,0.99431133
+"Firms 11-50 Workers (3-month MA, thousands)_lag_3",0.00017229267,0.99448365
+"Firms 1-10 Workers (3-month MA, thousands)_lag_1",0.0001721482,0.9946558
+Business Expectations - Sector (3 months)_lag_1,0.00016877364,0.9948246
+Tax Revenue - Income Tax (mill S/)_lag_2,0.0001626931,0.9949873
+"Firms 11-50 Workers (3-month MA, thousands)_lag_2",0.00016081457,0.9951481
+Public Consumption (mill S/ 2007)_lag_3,0.00015827507,0.9953064
+Business Expectations - Orders (MoM)_lag_3,0.00015397939,0.99546033
+Electricity Production - Lima (GWh)_lag_3,0.00015343282,0.99561375
+Real Exchange Rate Index (monthly %)_lag_3,0.00015174082,0.9957655
+"Independent Worker (3-month MA, thousands)_lag_2",0.00015005894,0.9959156
+GDP by Expenditure - Domestic Demand ex. Inventories (mill S/ 2007)_lag_2,0.00014493187,0.99606055
+Electricity Production - Lima (GWh)_lag_1,0.00013623362,0.9961968
+"Adequately Employed (3-month MA, thousands)_lag_2",0.0001357202,0.9963325
+"Firms 11-50 Workers (3-month MA, thousands)_lag_1",0.00013457202,0.9964671
+GDP - Fishing_lag_1,0.00013299652,0.9966001
+Employment Ratio (3-month MA)_lag_3,0.00013191784,0.996732
+"Underemployed (3-month MA, thousands)_lag_3",0.00013045123,0.9968625
+Chicken Placements (thousands)_lag_2,0.00012688704,0.99698937
+"Employed 45+ (3-month MA, thousands)_lag_3",0.00012428593,0.99711365
+"Unpaid Worker (3-month MA, thousands)_lag_1",0.00012410906,0.99723774
+Terms of Trade - Exports_lag_3,0.00011408186,0.9973518
+GDP - Other Services (index 2007=100)_lag_1,0.00011359304,0.99746543
+Public Fixed Investment (mill S/ 2007)_lag_3,0.00011126061,0.9975767
+Soybean Oil Price (US$ per ton)_lag_2,0.00011101197,0.9976877
+Business Expectations - Current Situation_lag_3,0.00010926923,0.99779695
+"Labor Force (3-month MA, thousands)_lag_3",0.00010842361,0.9979054
+GDP - Non-Primary Manufacturing_lag_1,0.00010528046,0.99801064
+Business Expectations - Inventory (MoM)_lag_1,0.000105212646,0.99811584
+"Labor Force (3-month MA, thousands)_lag_2",0.00010170414,0.9982175
+Business Expectations - Orders (MoM)_lag_2,9.670681e-05,0.9983142
+Employment Ratio (3-month MA)_lag_1,9.59344e-05,0.99841017
+"Firms 1-10 Workers (3-month MA, thousands)_lag_3",8.053526e-05,0.9984907
+Fishmeal Price (US$ per ton)_lag_3,7.544552e-05,0.99856615
+GDP by Expenditure - Domestic Demand (mill S/ 2007)_lag_3,7.3104646e-05,0.9986392
+Business Expectations - Inventory (MoM)_lag_2,6.987259e-05,0.9987091
+Crude Oil Price (US$ per barrel)_lag_2,6.93719e-05,0.99877846
+Copper Price (¢US$ per lb)_lag_2,6.460706e-05,0.9988431
+Coffee Price (US$ per ton)_lag_3,6.372826e-05,0.9989068
+Monthly Income (3-month MA)_lag_1,6.3617845e-05,0.9989704
+GDP - Fishing_lag_3,6.0834467e-05,0.99903125
+"Employed 45+ (3-month MA, thousands)_lag_2",5.5194363e-05,0.99908644
+Business Expectations - Economy (3 months)_lag_1,5.1334926e-05,0.99913776
+"Firms 51+ Workers (3-month MA, thousands)_lag_3",5.0639173e-05,0.9991884
+GDP - Mining_lag_1,4.8342772e-05,0.99923676
+Gold (US$ per oz troy)_lag_3,4.3832573e-05,0.9992806
+Public Consumption (mill S/ 2007)_lag_2,4.3074593e-05,0.99932367
+"Unpaid Worker (3-month MA, thousands)_lag_2",4.1467676e-05,0.99936515
+Chicken Placements (thousands)_lag_1,4.0765648e-05,0.9994059
+Tax Revenue - VAT (mill S/)_lag_2,4.0432944e-05,0.99944633
+"Underemployed (3-month MA, thousands)_lag_2",3.8256963e-05,0.9994846
+Fishmeal Price (US$ per ton)_lag_2,3.7752965e-05,0.9995223
+GDP Growth - Non-Primary Manufacturing_lag_3,3.5476907e-05,0.9995578
+Private Consumption (mill S/ 2007)_lag_3,3.3926583e-05,0.9995917
+"Dependent Worker (3-month MA, thousands)_lag_1",3.1547963e-05,0.99962324
+Business Expectations - Economy (3 months)_lag_2,3.0795083e-05,0.99965405
+"Firms 51+ Workers (3-month MA, thousands)_lag_1",2.9929684e-05,0.999684
+"Independent Worker (3-month MA, thousands)_lag_1",2.6679334e-05,0.9997107
+Electricity Production - Lima (GWh)_lag_2,2.5778008e-05,0.9997364
+Tax Revenue - Income Tax (mill S/)_lag_1,2.5327552e-05,0.99976176
+Monthly Income (3-month MA)_lag_2,2.3919245e-05,0.99978566
+GDP - Agriculture_lag_2,2.2569977e-05,0.99980825
+GDP Growth - Commerce (annual %)_lag_1,2.1431997e-05,0.9998297
+GDP - Mining_lag_3,2.1293656e-05,0.999851
+Corn Price (US$ per ton)_lag_3,1.355893e-05,0.9998645
+Tax Revenue - VAT (mill S/)_lag_3,1.3031108e-05,0.9998776
+GDP - Other Services (index 2007=100)_lag_2,1.1302734e-05,0.9998889
+Business Expectations - Sector (3 months)_lag_3,1.04589535e-05,0.9998993
+Business Expectations - Inventory (MoM)_lag_3,9.111135e-06,0.99990845
+Private Credit - MN - Consumption (mill S/)_lag_3,8.991155e-06,0.99991745
+Reserve Requirement Rate_lag_3,8.173356e-06,0.9999256
+Business Expectations - Sales (MoM)_lag_1,7.88299e-06,0.9999335
+Tax Revenue - Income Tax (mill S/)_lag_3,7.5944117e-06,0.99994105
+Monthly Income (3-month MA)_lag_3,6.883121e-06,0.9999479
+Gold (US$ per oz troy)_lag_2,6.3470943e-06,0.9999542
+GDP - Mining_lag_2,5.5903824e-06,0.9999598
+"Employed 45+ (3-month MA, thousands)_lag_1",5.5044447e-06,0.9999653
+Business Expectations - Sector (3 months)_lag_2,5.0295102e-06,0.9999703
+"Dependent Worker (3-month MA, thousands)_lag_3",4.89436e-06,0.9999752
+"Firms 51+ Workers (3-month MA, thousands)_lag_2",4.4457415e-06,0.9999797
+Soybean Oil Price (US$ per ton)_lag_3,4.279411e-06,0.99998397
+GDP - Other Services (index 2007=100)_lag_3,3.6580616e-06,0.9999876
+"Firms 1-10 Workers (3-month MA, thousands)_lag_2",3.0602328e-06,0.99999064
+Tax Revenue - VAT (mill S/)_lag_1,3.0041604e-06,0.9999936
+Chicken Placements (thousands)_lag_3,2.9723851e-06,0.9999966
+Reserve Requirement Rate_lag_1,2.042211e-06,0.9999986
+Corn Price (US$ per ton)_lag_2,1.3154619e-06,0.99999994
+GDP by Expenditure - Domestic Demand ex. Inventories (mill S/ 2007)_lag_3,0.0,0.99999994
+Monetary Policy Rate_lag_1,0.0,0.99999994
+Monetary Policy Rate_lag_2,0.0,0.99999994
+Business Expectations - Demand (3 months)_lag_2,0.0,0.99999994
