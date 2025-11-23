@@ -1,0 +1,2 @@
+Model,Train_RMSFE,Train_MAPE,Test_RMSFE,Test_MAPE,Best_Params,CV_RMSE
+XGBoost,0.0019086204523053295,1.9639816902633211,1.9922072582538777,81.11926442276307,"{'colsample_bytree': 0.8, 'learning_rate': 0.05, 'max_depth': 3, 'min_child_weight': 1, 'n_estimators': 300, 'subsample': 0.8}",0.5651591064847294
