@@ -1,0 +1,2 @@
+Model,RMSFE,MAPE,Best_Alpha,CV_RMSE,R2_Score,N_Features,Description
+Ridge Regression,0.0929643363543913,13.699670148169526,50.0,0.08989282857756412,0.3735444231391928,189,L2 regularized linear regression
