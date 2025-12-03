@@ -1,0 +1,2 @@
+Model,RMSFE,MAPE,Description
+Random Walk,0.20733955041889707,26.587038312493284,Naive forecast: ŷ(t+1) = y(t)
