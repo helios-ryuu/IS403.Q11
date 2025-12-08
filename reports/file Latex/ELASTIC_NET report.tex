@@ -1,0 +1,180 @@
+\documentclass[12pt, a4paper]{article}
+
+% --- KHAI BÁO PACKAGES ---
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}  % Hỗ trợ tiếng Việt
+\usepackage{amsmath, amssymb}   % Toán học
+\usepackage{graphicx}           % Chèn ảnh
+\usepackage{booktabs}           % Bảng đẹp
+\usepackage{geometry}           % Căn lề
+\usepackage{float}              % Vị trí hình ảnh
+\usepackage{cite}               % Trích dẫn
+\usepackage{url}                % Link
+\usepackage{indentfirst}        % Thụt đầu dòng đoạn đầu tiên
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Cấu hình lề trang giống file VAR_Report.pdf
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+
+% --- THÔNG TIN BÀI BÁO ---
+\title{\textbf{Ứng dụng Mô hình ElasticNet Regression trong Dự báo Biến động Chỉ số Kinh tế Vĩ mô}}
+\author{\textbf{Nhóm Nghiên cứu}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% --- ABSTRACT ---
+\begin{abstract}
+    \noindent \textbf{Tóm tắt:} Bài báo này trình bày việc ứng dụng mô hình ElasticNet Regression để dự báo biến động của chỉ số kinh tế (Core CPI). Nghiên cứu sử dụng bộ dữ liệu bao gồm kỳ vọng lạm phát, tỷ giá hối đoái và các chỉ số giá tiêu dùng trong quá khứ. Kết quả thực nghiệm cho thấy mô hình ElasticNet giúp khắc phục hiện tượng đa cộng tuyến trong dữ liệu vĩ mô, đạt được hệ số xác định $R^2$ khoảng 0.1038 và sai số phần trăm trung bình (MAPE) ở mức 15.79\%. Kết quả phân tích cũng chỉ ra rằng kỳ vọng tỷ giá hối đoái và lạm phát kỳ vọng là những yếu tố dẫn dắt quan trọng nhất đối với biến mục tiêu.
+    
+    \vspace{0.3cm}
+    \noindent \textbf{Keywords:} ElasticNet, Machine Learning, Forecasting, Inflation, Macroeconomics.
+\end{abstract}
+
+% --- 1. INTRODUCTION ---
+\section{Giới thiệu}
+
+Trong bối cảnh kinh tế toàn cầu nhiều biến động, việc dự báo chính xác các chỉ số kinh tế vĩ mô (như lạm phát, CPI) đóng vai trò then chốt trong việc hoạch định chính sách tiền tệ và quản trị rủi ro doanh nghiệp. Các mô hình kinh tế lượng truyền thống như OLS thường gặp khó khăn khi xử lý bộ dữ liệu có số lượng biến lớn và tồn tại hiện tượng đa cộng tuyến (multicollinearity) giữa các biến vĩ mô.
+
+Nghiên cứu này đề xuất sử dụng mô hình **ElasticNet Regression**, một kỹ thuật học máy kết hợp ưu điểm của cả Ridge Regression và Lasso Regression. Mục tiêu của bài báo là:
+\begin{itemize}
+    \item Xây dựng mô hình dự báo dựa trên dữ liệu lịch sử.
+    \item Đánh giá hiệu quả dự báo thông qua các chỉ số sai số định lượng.
+    \item Xác định và xếp hạng các yếu tố vĩ mô có ảnh hưởng lớn nhất đến biến mục tiêu.
+\end{itemize}
+
+% --- 2. LITERATURE ---
+\section{Tổng quan nghiên cứu}
+
+Các nghiên cứu định lượng về dự báo kinh tế đã trải qua nhiều giai đoạn phát triển. Truyền thống, các mô hình như VAR (Vector Autoregression) hay ARIMA thường được sử dụng cho chuỗi thời gian đơn biến hoặc đa biến số lượng nhỏ.
+
+Tuy nhiên, Tibshirani (1996) đã giới thiệu phương pháp LASSO để lựa chọn biến, và sau đó Zou \& Hastie (2005) đã phát triển ElasticNet để khắc phục nhược điểm của Lasso khi các biến có tương quan cao. ElasticNet đặc biệt hiệu quả trong các bài toán kinh tế lượng nơi các biến giải thích (như lãi suất, tỷ giá, cung tiền) thường xuyên biến động cùng chiều. Các nghiên cứu gần đây (ví dụ: Medeiros et al., 2019) cũng khẳng định ưu thế của các phương pháp "Shrinkage methods" này trong dự báo lạm phát so với các mô hình cấu trúc truyền thống.
+
+% --- 3. METHODOLOGY ---
+\section{Phương pháp nghiên cứu}
+
+Mô hình được sử dụng trong nghiên cứu này là ElasticNet. Đây là phương pháp hồi quy tuyến tính được chính quy hóa (regularized linear regression) nhằm tối thiểu hóa hàm mất mát bao gồm tổng bình phương sai số và hai thành phần phạt.
+
+Hàm mục tiêu cần tối thiểu hóa được định nghĩa như sau:
+
+\begin{equation}
+    \hat{\beta} = \underset{\beta}{\operatorname{argmin}} \left( \frac{1}{2n} \sum_{i=1}^{n} (y_i - X_i \beta)^2 + \lambda \sum_{j=1}^{p} \left( \alpha |\beta_j| + \frac{1-\alpha}{2} \beta_j^2 \right) \right)
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item $RSS = \sum (y_i - X_i \beta)^2$: Tổng bình phương phần dư.
+    \item $||\beta||_1 = \sum |\beta_j|$: Thành phần phạt chuẩn $L_1$ (Lasso), giúp đưa các hệ số của biến không quan trọng về 0 (lựa chọn biến).
+    \item $||\beta||_2^2 = \sum \beta_j^2$: Thành phần phạt chuẩn $L_2$ (Ridge), giúp xử lý đa cộng tuyến và giữ tính ổn định cho mô hình.
+    \item $\lambda$: Tham số kiểm soát độ mạnh của quá trình chính quy hóa.
+    \item $\alpha$: Tham số trộn ($0 \le \alpha \le 1$). Nếu $\alpha = 1$, mô hình trở về Lasso; nếu $\alpha = 0$, mô hình là Ridge.
+\end{itemize}
+
+% --- 4. DATA ---
+\section{Dữ liệu}
+
+Dữ liệu sử dụng trong nghiên cứu là chuỗi thời gian (time-series) theo tháng, bao gồm các chỉ số kinh tế vĩ mô chính. Dữ liệu được chia làm hai tập: tập huấn luyện (Training set) để xây dựng mô hình và tập kiểm thử (Test set) để đánh giá độc lập.
+
+Các nhóm biến số chính bao gồm:
+\begin{itemize}
+    \item \textbf{Biến mục tiêu:} Chỉ số giá tiêu dùng cơ bản (Core CPI) đã được chuẩn hóa.
+    \item \textbf{Biến giải thích:} 
+    \begin{itemize}
+        \item Kỳ vọng lạm phát (Macroeconomic Expectations - Inflation).
+        \item Kỳ vọng tỷ giá hối đoái (Exchange Rate Expectations).
+        \item Chỉ số CPI tổng thể (Headline CPI) với các độ trễ khác nhau (lags).
+    \end{itemize}
+\end{itemize}
+Dữ liệu đầu vào đã được xử lý độ trễ (Lagging) để phản ánh tính chất tác động trễ của chính sách tiền tệ lên nền kinh tế.
+
+% --- 5. RESULTS ---
+\section{Kết quả thực nghiệm}
+
+Phần này trình bày chi tiết hiệu suất của mô hình trên tập dữ liệu kiểm thử.
+
+\subsection{Hiệu suất Mô hình (Performance Metrics)}
+Kết quả định lượng được tổng hợp trong Bảng \ref{tab:metrics}. Mô hình đạt RMSE là 0.1112, cho thấy mức độ sai lệch trung bình của dự báo so với thực tế là chấp nhận được trong bối cảnh dữ liệu biến động mạnh.
+
+\begin{table}[H]
+    \centering
+    \caption{Các chỉ số đánh giá độ chính xác mô hình}
+    \label{tab:metrics}
+    \vspace{0.2cm}
+    \begin{tabular}{l c l}
+        \toprule
+        \textbf{Chỉ số (Metric)} & \textbf{Giá trị} & \textbf{Ý nghĩa} \\
+        \midrule
+        $R^2$ Score & 0.1038 & Giải thích được 10.38\% sự biến thiên \\
+        RMSE & 0.1112 & Căn bậc hai sai số trung bình bình phương \\
+        MAE & 0.0927 & Sai số tuyệt đối trung bình \\
+        MAPE & 15.79\% & Sai số phần trăm tuyệt đối trung bình \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Kết quả Dự báo và Chẩn đoán}
+Hình \ref{fig:forecast} so sánh trực quan giữa giá trị thực tế (đường màu xanh) và giá trị dự báo (đường màu cam). Có thể thấy mô hình bám sát được xu hướng chung nhưng có độ trễ nhất định tại các điểm đảo chiều.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{ELASTIC_NET Model/elasticnet_forecast_plot.png}
+    \caption{Biểu đồ so sánh giá trị Thực tế và Dự báo}
+    \label{fig:forecast}
+\end{figure}
+
+Hình \ref{fig:diag} biểu diễn phân phối của phần dư (Residuals). Phần dư phân phối tập trung quanh giá trị 0, cho thấy mô hình không bị chệch (bias) quá lớn.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth, height=6cm]{ELASTIC_NET Model/elasticnet_diagnostics_plot.png}
+    \caption{Biểu đồ chẩn đoán phần dư của mô hình}
+    \label{fig:diag}
+\end{figure}
+
+\subsection{Phân tích Tầm quan trọng của Biến}
+Một trong những ưu điểm của ElasticNet là khả năng xác định biến quan trọng. Bảng \ref{tab:features} liệt kê 5 biến có tác động lớn nhất.
+
+\begin{table}[H]
+    \centering
+    \caption{Top 5 biến vĩ mô quan trọng nhất}
+    \label{tab:features}
+    \vspace{0.2cm}
+    \begin{tabular}{p{8cm} c c}
+        \toprule
+        \textbf{Tên Biến (Feature)} & \textbf{Hệ số ($\beta$)} & \textbf{Tác động} \\
+        \midrule
+        Exchange Rate (12m)\_lag\_3 & -0.0481 & Tiêu cực \\
+        Headline CPI\_lag\_1 & 0.0423 & Tích cực \\
+        Inflation (12m)\_lag\_3 & 0.0348 & Tích cực \\
+        Inflation (12m)\_lag\_1 & 0.0309 & Tích cực \\
+        Headline CPI\_lag\_3 & 0.0220 & Tích cực \\
+        \bottomrule
+    \end{tabular}
+    \par\medskip
+    \small{\textit{Nguồn: Tính toán từ mô hình ElasticNet.}}
+\end{table}
+
+Biến \textit{Kỳ vọng Tỷ giá hối đoái (trễ 3 tháng)} có hệ số âm lớn nhất (-0.0481), hàm ý rằng khi kỳ vọng tỷ giá tăng, biến mục tiêu có xu hướng giảm sau 3 tháng. Ngược lại, \textit{Headline CPI} kỳ trước có tác động dương mạnh mẽ lên giá trị dự báo.
+
+% --- 6. CONCLUSION ---
+\section{Kết luận}
+
+Bài báo đã ứng dụng thành công mô hình ElasticNet để dự báo chỉ số kinh tế vĩ mô. Với sai số MAPE khoảng 15.8\%, mô hình cung cấp một công cụ tham khảo hữu ích. Kết quả nghiên cứu khẳng định tầm quan trọng của việc theo dõi chặt chẽ \textbf{kỳ vọng tỷ giá} và \textbf{lạm phát kỳ vọng} trong việc dự báo xu hướng tương lai. Các nghiên cứu tiếp theo có thể xem xét kết hợp ElasticNet với các mô hình phi tuyến (như Random Forest hoặc LSTM) để cải thiện chỉ số $R^2$.
+
+% --- REFERENCES ---
+\begin{thebibliography}{99}
+    \bibitem{zou2005} Zou, H., \& Hastie, T. (2005). Regularization and variable selection via the elastic net. \textit{Journal of the royal statistical society: series B}, 67(2), 301-320.
+    \bibitem{tibshirani1996} Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. \textit{Journal of the Royal Statistical Society: Series B}, 267-288.
+    \bibitem{medeiros2019} Medeiros, M. C., Vasconcelos, G. F., Veiga, Á., \& Zilberman, E. (2019). Forecasting inflation in a data-rich environment: The benefits of machine learning methods. \textit{Journal of Business \& Economic Statistics}.
+\end{thebibliography}
+
+% --- APPENDIX ---
+\appendix
+\section{Phụ lục}
+\subsection{Thông tin chi tiết về dữ liệu}
+Dữ liệu được thu thập từ [Nguồn dữ liệu của bạn] trong giai đoạn từ năm 2010 đến 2024. Các bước tiền xử lý bao gồm loại bỏ giá trị ngoại lai và chuẩn hóa theo phương pháp Min-Max Scaling.
+
+\end{document}
